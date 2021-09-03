@@ -1,9 +1,9 @@
-describe('Clinics Page', () => {
-    it('Verify list items' , ()=> {
-        browser.url('/');
+describe("Clinics Page", () => {
+  it("Verify list items", async () => {
+    await browser.url("/");
 
-        const listOfClinics = $$("ul li");
+    const listOfClinics = await $$("ul li");
 
-        expect(listOfClinics).toBeElementsArrayOfSize(4);
-    })
-})
+    expect(listOfClinics).toHaveLength(4);
+  });
+});
